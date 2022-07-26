@@ -7,8 +7,6 @@ import Filter from "./Filter";
 
 function App() {
 	const [filterBy, setFilterBy] = useState("") 
-	const greased = hogs.filter(element => element.greased === "true")
-	const notGreased = hogs.filter(element => element.greased === "false")
 
 	function handleFilterBy(event) {
         console.log(event.target.value)
@@ -20,7 +18,7 @@ function App() {
 			<Nav />
 			<Filter handleFilterBy={handleFilterBy}/>
 			<br></br>
-			<HogList hogData={hogs} filterBy={filterBy} greased={greased} notGreased={notGreased}/>
+			<HogList hogData={hogs} filterBy={filterBy} />
 		</div>
 	);
 }
